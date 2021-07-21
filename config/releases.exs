@@ -24,10 +24,8 @@ secret_key_base =
     """
 
 config :find_hotel, FindHotelWeb.Endpoint,
-  http: [
-    port: String.to_integer(System.get_env("PORT") || "4000"),
-    transport_options: [socket_opts: [:inet6]]
-  ],
+  url: [scheme: "https", host: "dry-hollows-59076.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   secret_key_base: secret_key_base
 
 # ## Using releases (Elixir v1.9+)
