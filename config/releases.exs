@@ -22,7 +22,7 @@ secret_key_base =
     environment variable SECRET_KEY_BASE is missing.
     You can generate one by calling: mix phx.gen.secret
     """
-
+IO.inspect(System.get_env("PORT"))
 config :find_hotel, FindHotelWeb.Endpoint,
   http: [port: {:system, "PORT"}],
   load_from_system_env: true,

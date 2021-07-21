@@ -41,6 +41,4 @@ COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/find_hotel ./
 
 ENV HOME=/app
 
-EXPOSE 8080
-
 CMD ["bin/find_hotel", "start"]
