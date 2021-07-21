@@ -24,6 +24,7 @@ secret_key_base =
     """
 
 config :find_hotel, FindHotelWeb.Endpoint,
+  http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "dry-hollows-59076.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   secret_key_base: secret_key_base
