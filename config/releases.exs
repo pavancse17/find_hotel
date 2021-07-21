@@ -25,7 +25,7 @@ secret_key_base =
 
 config :find_hotel, FindHotelWeb.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "dry-hollows-59076.herokuapp.com", port: 443],
+  url: [scheme: "https", host: "thawing-journey-59645.herokuapp.com", port: 443],
   secret_key_base: secret_key_base
 
 # ## Using releases (Elixir v1.9+)
