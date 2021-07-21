@@ -38,6 +38,22 @@ defmodule FindHotel.GeolocationService do
   def get_geolocation!(id), do: Repo.get!(Geolocation, id)
 
   @doc """
+  Gets a single geolocation.
+
+  Returns nil if the Geolocation does not exist.
+
+  ## Examples
+
+      iex> get_geolocation_by(ip_address: "123.232.323.343")
+      %Geolocation{}
+
+      iex> get_geolocation_by(ip_address: "456")
+      nil
+
+  """
+  def get_geolocation_by(opts), do: Repo.get_by(Geolocation, opts)
+
+  @doc """
   Creates a geolocation.
 
   ## Examples

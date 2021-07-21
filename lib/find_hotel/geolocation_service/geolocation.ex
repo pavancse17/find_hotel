@@ -2,6 +2,16 @@ defmodule FindHotel.GeolocationService.Geolocation do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @derive {Jason.Encoder,
+           only: [
+             :ip_address,
+             :country_code,
+             :country,
+             :city,
+             :latitude,
+             :longitude,
+             :mystery_value
+           ]}
   schema "geolocations" do
     field :city, :string
     field :country, :string

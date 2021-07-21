@@ -7,6 +7,7 @@ defmodule FindHotelWeb.Router do
 
   scope "/api", FindHotelWeb do
     pipe_through :api
+    get "/geolocation/:ip_address", GeolocationController, :detail
   end
 
   # Enables LiveDashboard only for development
