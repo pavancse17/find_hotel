@@ -14,5 +14,6 @@ defmodule FindHotel.Repo.Migrations.CreateGeolocations do
       timestamps()
     end
 
+    create unique_index(:geolocations, :ip_address)
   end
 end
