@@ -37,4 +37,4 @@ COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/find_hotel ./
 
 ENV HOME=/app
 
-CMD ["bin/my_app", "start"]
+CMD ["bin/find_hotel", "start"]
