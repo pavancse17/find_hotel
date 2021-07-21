@@ -28,7 +28,8 @@ RUN mix do compile, release
 
 # prepare release image
 FROM alpine:3.9 AS app
-RUN apk add --no-cache openssl ncurses-libs
+RUN apk upgrade --no-cache && \
+    apk add --no-cache postgresql-client bash openssl libgcc libstdc++ ncurses-libs
 
 WORKDIR /app
 
